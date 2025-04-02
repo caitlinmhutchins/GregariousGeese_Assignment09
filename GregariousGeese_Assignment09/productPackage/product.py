@@ -13,22 +13,3 @@
 # Anything else that's relevant:
 # product.py
 
-
-class Product:
-    def __init__(self, row):
-        self.product_id = row.ProductID
-        self.description = row.Description
-        self.manufacturer_id = row.ManufacturerID
-        self.brand_id = row.BrandID
-        self.manufacturer_name = ""
-        self.brand_name = ""
-        self.total_items_sold = 0
-
-    def populate_details(self, db):
-        self.manufacturer_name = db.get_manufacturer_name(self.manufacturer_id)
-        self.brand_name = db.get_brand_name(self.brand_id)
-        self.total_items_sold = db.get_items_sold(self.product_id)
-
-    def __str__(self):
-        return f"The product '{self.description}' is manufactured by {self.manufacturer_name}, branded as {self.brand_name}, and has sold {self.total_items_sold} items."
-

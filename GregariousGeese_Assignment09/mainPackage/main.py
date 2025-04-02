@@ -14,25 +14,3 @@
 # main.py
 
 
-import random
-from databasePackage.database import Database
-from productPackage.product import Product
-
-
-def main():
-    db = Database()
-    products = db.get_products()
-    if not products:
-        print("No products found.")
-        return
-
-    selected_row = random.choice(products)
-    product = Product(selected_row)
-    product.populate_details(db)
-    print(product)
-
-if __name__ == "__main__":
-    main()
-
-
-
