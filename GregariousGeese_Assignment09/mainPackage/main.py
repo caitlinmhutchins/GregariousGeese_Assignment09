@@ -1,6 +1,6 @@
 # File Name : GreagriousGeese_Assignment09
-# Student Name: Caitlin Hutchins,
-# email: hutchicu@mail.uc.edu,
+# Student Name: Caitlin Hutchins, Sharvari Patil
+# email: hutchicu@mail.uc.edu, patilsg@mail.uc.edu
 # Assignment Number: Assignment 09
 # Due Date:  4/3/25
 # Course #/Section: IS 4010-001
@@ -13,4 +13,23 @@
 # Anything else that's relevant:
 # main.py
 
+import random
+from databasePackage.database import Database
+from productPackage.product import Product
+
+
+def main():
+    db = Database()
+    products = db.get_products()
+    if not products:
+        print("No products found.")
+        return
+
+    selected_row = random.choice(products)
+    product = Product(selected_row)
+    product.populate_details(db)
+    print(product)
+
+if __name__ == "__main__":
+    main()
 

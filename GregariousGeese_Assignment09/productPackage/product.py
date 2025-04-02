@@ -1,6 +1,6 @@
 # File Name : GreagriousGeese_Assignment09
-# Student Name: Caitlin Hutchins,
-# email: hutchicu@mail.uc.edu,
+# Student Name: Caitlin Hutchins, Sharvari Patil
+# email: hutchicu@mail.uc.edu, patilsg@mail.uc.edu
 # Assignment Number: Assignment 09
 # Due Date:  4/3/25
 # Course #/Section: IS 4010-001
